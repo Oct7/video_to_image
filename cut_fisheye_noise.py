@@ -14,7 +14,7 @@ for folder in fileList:
     if '.DS_Store' in fileList_second:
         fileList_second.remove('.DS_Store')
     for image in fileList_second:
-        if image.split('.')[0] == 'jpg' and image.find('origin') != -1:
+        if image.split('.')[1] == 'jpg' and image.find('origin') != -1:
             # Open the input image as numpy array, convert to RGB
             img = Image.open(folder+'/'+image).convert("RGB")
             npImage = np.array(img)
