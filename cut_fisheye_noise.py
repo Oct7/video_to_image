@@ -7,9 +7,10 @@ pathDir = 'image'
 fileList = os.listdir(pathDir)
 if '.DS_Store' in fileList:
     fileList.remove('.DS_Store')
-
+print(fileList)
 for folder in fileList:
     fileList_second = os.listdir(pathDir+'/'+folder)
+    print(fileList_second)
     if '.DS_Store' in fileList_second:
         fileList_second.remove('.DS_Store')
     for image in fileList_second:
