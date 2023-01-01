@@ -5,11 +5,13 @@ import os
 
 pathDir = 'image'
 fileList = os.listdir(pathDir)
-fileList.remove('.DS_Store')
+if '.DS_Store' in fileList:
+    fileList.remove('.DS_Store')
 
 for folder in fileList:
     fileList_second = os.listdir(pathDir+'/'+folder)
-    fileList_second.remove('.DS_Store')
+    if '.DS_Store' in fileList_second:
+        fileList_second.remove('.DS_Store')
     for image in fileList_second:
         if image.split('.')[0] == 'jpg' and image.find('origin') != -1:
             # Open the input image as numpy array, convert to RGB
