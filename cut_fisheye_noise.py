@@ -16,7 +16,7 @@ for folder in fileList:
     for image in fileList_second:
         if image.split('.')[1] == 'jpg' and image.find('origin') != -1:
             # Open the input image as numpy array, convert to RGB
-            img = Image.open(pathDir+folder+'/'+image).convert("RGB")
+            img = Image.open(pathDir+'/'+folder+'/'+image).convert("RGB")
             npImage = np.array(img)
             h, w = img.size
 
